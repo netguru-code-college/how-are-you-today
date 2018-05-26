@@ -2,8 +2,8 @@
 
 # README
 
-### H3 Setting up your project
-## H2 In Your Terminal:
+## Setting up your project
+### In Your Terminal:
 1. $ **bundle install**
 
 2. Create your local database: $ **rake db:create**
