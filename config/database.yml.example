@@ -1,0 +1,16 @@
+defaults: &defaults
+  adapter:  postgresql
+  host:     localhost
+  encoding: utf8
+  pool:     10
+  username: user
+  password: password
+  template: template0
+
+development:
+  <<: *defaults
+  database: ht_development
+
+test:
+  <<: *defaults
+  database: ht_test
