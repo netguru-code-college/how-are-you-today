@@ -8,3 +8,4 @@ production:
   adapter: redis
   url: redis://localhost:6379/1
   channel_prefix: how_are_you_today_production
+  url: <%= ENV["REDISCLOUD_URL"] %>
