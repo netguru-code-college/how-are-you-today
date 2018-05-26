@@ -1,1 +1,32 @@
-%h1 How are you today?
+.chat
+  .chat-header.clearfix
+    %img{alt: "avatar", src: 'https://www.shareicon.net/download/2015/09/24/106425_man.ico'}
+    .chat-about
+      .chat-with Name
+      .chat-num-messages Message quantity
+  .chat-history
+    %ul
+      %li.clearfix
+        .message-data.align-right
+          %span.message-data-time 10:10 AM, Today
+             
+          %span.message-data-name Olia
+        .message.other-message.float-right
+          Hi Vincent, how are you? How is the project coming along?
+      %li
+        .message-data
+          %span.message-data-name
+            Vincent
+          %span.message-data-time 10:12 AM, Today
+        .message.my-message
+          Are we meeting today? Project has been already finished and I have results to show you.
+
+
+  .chat-message.clearfix
+    .row
+      %form
+        .input-field.col.s8
+          %i.material-icons.prefix mode_edit
+          %textarea#icon_prefix2.materialize-textarea
+          %label{:for => "icon_prefix2"} Type your message...
+    %button Send
