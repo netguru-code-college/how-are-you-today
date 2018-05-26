@@ -114,13 +114,6 @@ body {
     .chat-num-messages {
       color: $gray;
     }
-
-    .fa-star {
-      float: right;
-      color: #D8DADF;
-      font-size: 20px;
-      margin-top: 12px;
-    }
   }
 
   .chat-history {
@@ -174,30 +167,28 @@ body {
         left: 93%;
       }
     }
-
   }
 
   .chat-message {
     padding: 30px;
 
     textarea {
-      width: 100%;
-      border: none;
-      padding: 10px 20px;
+      border: 0;
       margin-bottom: 10px;
+      padding: 10px 20px;
       resize: none;
-
+      width: 100%;
     }
 
     button {
-      float: right;
-      color: $blue;
-      font-size: 16px;
-      text-transform: uppercase;
-      border: 0;
-      cursor: pointer;
-      font-weight: bold;
       background: #f2f5f8;
+      border: 0;
+      color: $blue;
+      cursor: pointer;
+      float: right;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
 
       &:hover {
         color: darken($blue, 7%);

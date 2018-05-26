@@ -231,8 +231,8 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
-  faraday (~> 0.15.2)
   database_cleaner
+  faraday (~> 0.15.2)
   haml
   jbuilder (~> 2.5)
   jquery-rails
