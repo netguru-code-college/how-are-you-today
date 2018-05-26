@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'haml'
+gem 'faraday', '~> 0.15.2'
 gem 'materialize-sass'
 gem 'rubocop', require: false
 
