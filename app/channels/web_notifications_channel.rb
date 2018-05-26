@@ -1,4 +1,6 @@
 
+# frozen_string_literal: true
+
 # app/channels/web_notifications_channel.rb
 class WebNotificationsChannel < ApplicationCable::Channel
   def subscribed
