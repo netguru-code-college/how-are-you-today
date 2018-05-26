@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### H3 Setting up your project
+## H2 In Your Terminal:
+1. $ **bundle install**
 
-Things you may want to cover:
+2. Create your local database: $ **rake db:create**
 
-* Ruby version
+3. Migrate your database: $ **rake db:migrate**
 
-* System dependencies
 
-* Configuration
+* Ruby version: 2.5.1
 
-* Database creation
+* Rails version: 5.1.6
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Database: Postgresql
