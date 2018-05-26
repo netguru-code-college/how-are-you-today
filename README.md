@@ -1,3 +1,6 @@
+
+https://travis-ci.org/netguru-code-college/how-are-you-today.svg?branch=master
+
 # README
 
 ### H3 Setting up your project
@@ -14,3 +17,4 @@
 * Rails version: 5.1.6
 
 * Database: Postgresql
+
