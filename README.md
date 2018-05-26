@@ -1,5 +1,4 @@
-
-https://travis-ci.org/netguru-code-college/how-are-you-today.svg?branch=master
+[![Build Status](https://travis-ci.org/netguru-code-college/how-are-you-today.svg?branch=master)](https://travis-ci.org/netguru-code-college/how-are-you-today)
 
 # README
 
