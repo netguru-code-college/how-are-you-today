@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Description/Explanation of Message class
 class Message < ApplicationRecord
   belongs_to :user
   belongs_to :chat_room

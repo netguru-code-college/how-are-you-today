@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Description/Explanation of MessageBroadcastJob class
 class MessageBroadcastJob < ApplicationJob
   queue_as :default
 
