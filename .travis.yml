@@ -1,6 +1,16 @@
 language: ruby
 rvm:
 - 2.5.1
+addons:
+  postgresql: 9.6
+before_script:
+  - "cp config/database.yml.travis config/database.yml"
+  - "psql -c 'create database how_are_you_today_test;' -U postgres"
+script:
+  - bundle exec rails db:migrate RAILS_ENV=test
+  - bundle exec rspec
 deploy:
+ provider: heroku
   api_key:
-    secure: t92Dqh7345+qjEV6Y2jVP/bzhgch2yDGr0KGtRpUSFPN1LTmfzf60CzNZNmFrXKM13xe4bJAOGcNnRBYjaOsJNyD6hrkYLJtGIzFqoc3EHuPElU4Vuc0aXw9DEV751SGyntp3sCcETDZRhU2iGW/5Us18juZKfsSxaEOzp/6eMD3qhJAJOuKxibRvvERZfQ0IQTMH/Mej8HNeuaGZ4MawCi6A/BNZhccpawGutE46gF3frbU6h32ZrLj9x8RHs5VsnHLGzMkWvHRHBQXCMhE3NCnHzJ41AfsPtdzmFKL10SVn/5bnZT4rHDVe/iHdkQ7sI+2boo5PiLhZigBRVmbTz4wY/sIJNccsVWZQ2FSmRRWx4/R/tATs53vsocKnM4f37uMpGs2IvQEcR4k+qRHqx4bWiEV9h5Khlu6dMN3TFLWa8N5D6UKQYg5+BqzM3tVy3Y08ERmUHexfEwCSInMt8hFqtXoTpPCV/yChiyZTGPEaGr+XP3uDvqyssdHC+xzKEgiWbW3Na3SJV6FB45N/ttXBSZI2TXCSIfUnf0ZhH5EN7rlMZWPlvDKRq9KaALImXkIqVr+k5Y6V8ENmKAaCnptCFimT+00W9C0o8nSjS0exdlRUPojKoEegV0rml9AP0KhqNWCTz/UJgrMh1mSHT/LkoisL5+bMtqZJe0NoeY=
+    secure: NAhtn0eRHndCsMAEdhbFaZTrHAgPp68uFwb69JKQ6xvmYdenUY0bC4MxtNGy21KqKcc2SDAaALAF9Jg9hVusqIPguRqIIWKpmZNKYrfRO4ldt+K4iHRLsFw1yKEoN4UiCNbmXpv4t/JlNx7Xve0L46qItlLIH6q3l4GQsl/stFbec/fN/GvQ7e+dGIDTxBGTOkarUNPqk0kk0FZJ3w+nzK7h8vmhklpPdX0sNwEc6HQwqc7SNVc5GKlHvPe2ZJmirRDTM/rcwZIsqRRGJ+Sn1xLBI+ysBsYpm+XbnY/bp81jCE7sBygNZNlE322+U2oZoDmuB7rzODq8kbEh4Omou6NI460BK/N3JIIQq+6oasta/+y1V9YTrPLfGQHRECNRRhuszctIo8iITV1KAigDCPLJSs4c0Ga9yIUezqj89OAroZmu1BUXU+bKI2qSwtvo5Fe4iPXhJzf/aeuvQeErrlg+sbz9F7BBOo/dxhx1bxj+QsD8osw2AWNc4pWvR5K6F5UEawiF7/4k2NTnXzx8ty0yPSq0wcu2zPAri1O+PU1WoXAeQlOR7tWzB3G6wc2xCznZiCr4c9uVXktbidxU9MJCFJWuvDxC1LIXsvbKXyUxD7cB7zn2f6nvondUWgtDj5x0fy4MPzAKaArin5XLhiNVp90mgtnXNIE4ZWYPgbE=
+  app: how-are-you-today-app
