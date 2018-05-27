@@ -9,3 +9,8 @@ before_script:
 script:
   - bundle exec rails db:migrate RAILS_ENV=test
   - bundle exec rspec
+deploy:
+ provider: heroku
+  api_key:
+    secure: NAhtn0eRHndCsMAEdhbFaZTrHAgPp68uFwb69JKQ6xvmYdenUY0bC4MxtNGy21KqKcc2SDAaALAF9Jg9hVusqIPguRqIIWKpmZNKYrfRO4ldt+K4iHRLsFw1yKEoN4UiCNbmXpv4t/JlNx7Xve0L46qItlLIH6q3l4GQsl/stFbec/fN/GvQ7e+dGIDTxBGTOkarUNPqk0kk0FZJ3w+nzK7h8vmhklpPdX0sNwEc6HQwqc7SNVc5GKlHvPe2ZJmirRDTM/rcwZIsqRRGJ+Sn1xLBI+ysBsYpm+XbnY/bp81jCE7sBygNZNlE322+U2oZoDmuB7rzODq8kbEh4Omou6NI460BK/N3JIIQq+6oasta/+y1V9YTrPLfGQHRECNRRhuszctIo8iITV1KAigDCPLJSs4c0Ga9yIUezqj89OAroZmu1BUXU+bKI2qSwtvo5Fe4iPXhJzf/aeuvQeErrlg+sbz9F7BBOo/dxhx1bxj+QsD8osw2AWNc4pWvR5K6F5UEawiF7/4k2NTnXzx8ty0yPSq0wcu2zPAri1O+PU1WoXAeQlOR7tWzB3G6wc2xCznZiCr4c9uVXktbidxU9MJCFJWuvDxC1LIXsvbKXyUxD7cB7zn2f6nvondUWgtDj5x0fy4MPzAKaArin5XLhiNVp90mgtnXNIE4ZWYPgbE=
+  app: how-are-you-today-app
