@@ -25,20 +25,11 @@ $gray: #92959E;
 *, *:before, *:after {
   box-sizing: border-box;
 }
-input[type="text"] + label {
-  pointer-events: none;
 
-  * {
-    pointer-events: all;
-  }
-}
-input:-webkit-autofill + label {
-  font-size: 0.8rem;
-  transform: translateY(-140%); }
 body {
   background: #C5DDEB;
-  padding: 0;
   color: white;
+  padding: 0;
 }
 
 //.container {
