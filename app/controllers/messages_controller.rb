@@ -6,16 +6,17 @@ class MessagesController < ApplicationController
   end
 
   def create
-    # binding.pry
+    binding.pry
     message = Message.create!(message_params)
-    # message.image.attach(params[:message][:image])
+    message.image.attach(params[:message][:image])
     head :ok
-    # indentations lol
+    # indentations / ojtam ojtam
   end
 
   private
 
   def message_params
-    params.require(:message).permit(:body, :image)
+    params.require(:message).permit(:body, :image, :chat_room_id)
+    params.merge(user_id: current_user.id)
   end
 end
