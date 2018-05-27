@@ -16,6 +16,6 @@ class User < ApplicationRecord
   end
 
   def online?
-    updated_at > 2.minutes.ago
+    updated_at > 5.minutes.ago
   end
 end
