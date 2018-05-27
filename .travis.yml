@@ -5,7 +5,7 @@ addons:
   postgresql: 9.6
 before_script:
   - "cp config/database.yml.travis config/database.yml"
-  - "psql -c 'create database how_are_you_test;' -U postgres"
+  - "psql -c 'create database how_are_you_today_test;' -U postgres"
 script:
   - bundle exec rails db:migrate RAILS_ENV=test
   - bundle exec rspec
