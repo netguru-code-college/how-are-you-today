@@ -17,8 +17,6 @@
 
 ## Setup
 
-Make sure you have [Ruby](https://www.ruby-lang.org) and [Bundler](http://bundler.io) installed.
-
 #### Clone the repository
 
     $ git clone https://github.com/netguru-code-college/how-are-you-today.git && cd how-are-you-today
