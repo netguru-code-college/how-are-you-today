@@ -2,7 +2,7 @@
   .card-panel.black-text
     %h1 Add chat room
     = form_for @chat_room do |f|
-      .form-group
-        = f.label :title
+      .input-field
         = f.text_field :title, autofocus: true, class: 'form-control'
-      = f.submit "Add!", class: 'btn btn-primary'
+        = f.label :title
+      = f.submit "Add!", class: 'waves-effect waves-light btn'
