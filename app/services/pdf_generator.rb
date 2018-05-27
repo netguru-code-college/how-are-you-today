@@ -11,8 +11,8 @@ class PdfGenerator
   def generate
     pdf = Prawn::Document.new
     cursor = 0
-    #pdf.bounding_box([0, cursor], :width => 1000, :height => 1000, ) do 
-      pdf.image open(@image_path), :fit => [100, 100], :position => :center
+    #pdf.bounding_box([0, cursor], :width => 1000, :height => 1000, ) do
+      pdf.image open(@image_path), :fit => [500, 500], :position => :center
     #end
     @response.map.with_index do |face, index|
       pdf.text "Person #{index} emotions:"
