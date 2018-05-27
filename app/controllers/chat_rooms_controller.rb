@@ -22,16 +22,6 @@ class ChatRoomsController < ApplicationController
   def show
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
     @message = Message.new
-    respond_to do |format|
-      format.html
-      format.pdf do
-        pdf = Prawn::Document.new
-        pdf.text "this is a pdf"
-        send_data pdf.render, filename: "mypdf.pdf",
-                      type: "application/pdf",
-  	              disposition: "inline"
-      end
-    end
   end
 
   private
