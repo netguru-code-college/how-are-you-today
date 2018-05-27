@@ -52,4 +52,5 @@ node_modules/
 # Various artifacts
 config/database.yml
 config/secrets.yml
+storage/
 
