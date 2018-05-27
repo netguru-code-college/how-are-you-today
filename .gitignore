@@ -51,4 +51,4 @@ node_modules/
 .idea
 # Various artifacts
 config/database.yml
-
+config/secrets.yml
