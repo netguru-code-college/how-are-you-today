@@ -8,12 +8,10 @@ class FaceDetectApiService
   def call
     uri = URI("https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect")
     uri.query = URI.encode_www_form(
-      {
-        "returnFaceId" => "true",
-        "returnFaceLandmarks" => "false",
-        "returnFaceAttributes" => "emotion,age,gender",
-        "scores" => "true"
-      }
+      "returnFaceId" => "true",
+      "returnFaceLandmarks" => "false",
+      "returnFaceAttributes" => "emotion,age,gender",
+      "scores" => "true"
     )
 
     request = Net::HTTP::Post.new(uri.request_uri)
