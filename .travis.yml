@@ -1,3 +1,6 @@
+addons:
+  apt:
+    update: true
 before_script:
   - psql -c 'how_are_you_today_test;' -U postgres
 language: ruby
