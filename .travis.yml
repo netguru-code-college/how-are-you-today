@@ -1,16 +1,15 @@
-addons:
-  apt:
-    update: true
-   postgresql: 9.5
-  before_script:
-    - cp config/database.yml.travis config/database.yml
-    - psql -c 'how_are_you_today_test;' -U postgres
-  script:
-    - bundle exec rails db:migrate RAILS_ENV=test
-    - bundle exec rspec
 language: ruby
 rvm:
 - 2.5.1
+env: 
+  - RAILS_ENV=test
+before_script:
+  - "psql -c 'how_are_you_today_test;' -U postgres"
+  - "cp config/database.yml.travis config/database.yml"
+script: 
+  - bundle exec rake db:schema:load
+  - bundle exec rake db:test:prepare
+  - bundle exec rake spec
 deploy:
  provider: heroku
   api_key:
