@@ -32,7 +32,7 @@ group :development, :test do
   gem "pry-rails"
   gem "rspec-rails", "~> 3.7"
   gem "selenium-webdriver"
-  gem "shoulda-matchers'
+  gem "shoulda-matchers"
 end
 
 group :development do
