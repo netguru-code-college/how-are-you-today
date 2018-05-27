@@ -13,7 +13,7 @@
 ## Links
 
 [Heroku](https://how-are-you-today-app.herokuapp.com/)
-[TravisCI](https://travis-ci.org/netguru-code-college/despacito-booking)
+[TravisCI](https://travis-ci.org/netguru-code-college/how-are-you-today)
 
 ## Setup
 
