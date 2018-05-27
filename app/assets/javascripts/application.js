@@ -15,5 +15,6 @@
 //= require bootstrap
 //= require rails-ujs
 //= require turbolinks
+//= require materialize
 //= require cable
 //= require_tree .
