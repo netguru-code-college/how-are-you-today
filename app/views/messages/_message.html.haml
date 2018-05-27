@@ -9,4 +9,5 @@
   .message.other-message.float-right
     %br/
     = message.body
-    = image_tag(url_for(message.image), class: "responsive-img")
+    - if message.image.present?
+      = image_tag(url_for(message.image), class: "responsive-img")
