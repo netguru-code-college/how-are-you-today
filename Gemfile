@@ -13,7 +13,7 @@ gem "jquery-rails"
 gem "materialize-sass"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.7"
-gem "rails", "~> 5.1.6"
+gem "rails", "~> 5.2.0"
 gem "rubocop", require: false
 gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
