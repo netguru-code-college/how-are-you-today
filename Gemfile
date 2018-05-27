@@ -16,6 +16,7 @@ gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "materialize-sass"
 gem "pg", ">= 0.18", "< 2.0"
+gem "prawn-rails"
 gem "puma", "~> 3.7"
 gem "rails", "~> 5.2.0"
 gem "rubocop", require: false
