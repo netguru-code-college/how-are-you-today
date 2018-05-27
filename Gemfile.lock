@@ -261,7 +261,6 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   database_cleaner
-  configure-ActionTable-backendwq
   devise
   faraday (~> 0.15.2)
   haml
