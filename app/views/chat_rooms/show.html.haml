@@ -1,11 +1,26 @@
-%h1= @chat_room.title
-#messages{"data-chat-room-id" => "#{@chat_room.id}"}
-  = render @chat_room.messages
-%hr/
-= form_for @message, url: '#' do |f|
-  = hidden_field_tag 'chat_room_id', @chat_room.id
-  .form-group
-    = f.label :body
-    = f.text_area :body, class: 'form-control'
-    %small.text-muted From 2 to 1000 characters
-  = f.submit "Post", class: 'btn btn-primary btn-lg'
+
+
+.container
+  .chat
+    .chat-header.clearfix
+      %img{ alt: "avatar", src: 'https://www.shareicon.net/download/2015/09/24/106425_man.ico' }
+      .chat-about
+        .chat-with
+          = @chat_room.title
+        .chat-num-messages Message quantity
+    .chat-history
+      %ul
+        #messages{"data-chat-room-id" => "#{@chat_room.id}"}
+          = render @chat_room.messages
+  .chat
+    .chat-message
+      = form_for @message, url: '#' do |f|
+        = hidden_field_tag 'chat_room_id', @chat_room.id
+        .input-field.col.s8
+          %i.material-icons.prefix mode_edit
+          -#= f.label :body
+          = f.text_area :body, class: 'materialize-textarea', placeholder: 'Type your message...'
+
+          %small.text-muted From 2 to 1000 characters
+        = f.submit "Post", class: 'btn btn-primary btn-lg'
+
