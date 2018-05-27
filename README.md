@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/netguru-code-college/how-are-you-today.svg?branch=master)](https://travis-ci.org/netguru-code-college/how-are-you-today)
 
 # How are you today?
-[![Build status](https://travis-ci.org/netguru-code-college/despacito-booking.png)](https://travis-ci.org/netguru-code-college/despacito-booking)
 
 ## Technology
 
