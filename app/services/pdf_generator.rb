@@ -32,6 +32,6 @@ class PdfGenerator
       pdf.fill_color "00FF00"
       pdf.text "#{emotions[2][0]} with probability #{emotions[2][1]}"
     end
-    pdf.render_file Rails.root.join("app/pdfs", "hello.pdf")
+    pdf.render_file Rails.root.join("public/pdfs", "hello.pdf")
   end
 end

@@ -8,6 +8,11 @@ class MessagesController < ApplicationController
   def create
     message = Message.create!(message_params)
     message.image.attach(params[:message][:image])
+    FaceDetectApiService.new(url_for(message.image)).call
+
+    ActionCable.server.broadcast "chat_rooms_#{message.chat_room.id}_channel",
+                                 message: "Detection done: Your link is: #{Rails.root.join("public/pdfs", "hello.pdf")}"
+
     head :ok
   end
 
