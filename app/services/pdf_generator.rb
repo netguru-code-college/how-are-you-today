@@ -1,7 +1,7 @@
 class PdfGenerator
   def generate
-    Prawn::Document.generate(File.join(Rails.root, "app/pdfs", "hello.pdf")) do
-      text "Hello World from pdf!"
+    Prawn::Document.generate(Rails.root.join("app/pdfs", "hello.pdf")) do
+      text "Hello World asdfasdf pdf!"
     end
   end
 end
