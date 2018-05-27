@@ -16,6 +16,7 @@
 
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/css?family=Satisfy";
 
 $green: #86BB71;
 $blue: #94C2ED;
@@ -37,6 +38,10 @@ body {
 //  width: 750px;
 //  background: #444753;
 //}
+.brand-logo {
+  font-family: 'Satisfy', cursive;
+}
+
 .active-users {
   i, p {
     margin: 0;
@@ -93,6 +98,7 @@ body {
   background: #F2F5F8;
   color: #434651;
   width: 100%;
+  margin-top: 2em;
 
   .chat-header {
     padding: 20px;
