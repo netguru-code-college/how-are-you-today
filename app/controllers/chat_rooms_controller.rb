@@ -22,6 +22,10 @@ class ChatRoomsController < ApplicationController
   def show
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
     @message = Message.new
+    if !Membership.where(user_id: current_user.id, chat_room_id: @chat_room.id).present?
+      Membership.create(user_id: current_user.id, chat_room_id: @chat_room.id)
+    end
+
   end
 
   private
