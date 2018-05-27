@@ -6,6 +6,9 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: how_are_you_today_production
+  host: <%= ENV["REDISCLOUD_HOST"] %>
+  user: <%= ENV["REDISCLOUD_USER"] %>
   url: <%= ENV["REDISCLOUD_URL"] %>
+  password: <%= ENV["REDISCLOUD_PASSWORD"] %>
+  port: 10679
+  channel_prefix: how_are_you_today_production

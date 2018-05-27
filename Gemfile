@@ -19,6 +19,7 @@ gem "pg", ">= 0.18", "< 2.0"
 gem "prawn-rails"
 gem "puma", "~> 3.7"
 gem "rails", "~> 5.2.0"
+gem "redis"
 gem "rubocop", require: false
 gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
