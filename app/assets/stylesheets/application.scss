@@ -32,11 +32,11 @@ body {
   color: white;
 }
 
-.container {
-  margin: 0 auto;
-  width: 750px;
-  background: #444753;
-}
+//.container {
+//  margin: 0 auto;
+//  width: 750px;
+//  background: #444753;
+//}
 
 .people-list {
   float: left;
@@ -88,6 +88,7 @@ body {
   float:left;
   background: #F2F5F8;
   color: #434651;
+  width: 100%;
 
   .chat-header {
     padding: 20px;
@@ -119,7 +120,7 @@ body {
   .chat-history {
     padding: 30px 30px 20px;
     border-bottom: 2px solid white;
-    overflow-y: scroll;
+
     min-height: 400px;
 
     .message-data {

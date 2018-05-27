@@ -1,1 +1,7 @@
-%li= link_to "Enter #{chat_room.title}", chat_room_path(chat_room)
+%li.collection-item
+  %div
+    =chat_room.title
+    = link_to chat_room_path(chat_room), class: 'secondary-content' do
+      %i.material-icons send
+
+
