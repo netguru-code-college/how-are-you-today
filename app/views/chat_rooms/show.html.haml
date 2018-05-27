@@ -1,4 +1,3 @@
-
 .container
   .row
     .col.s4
@@ -32,12 +31,12 @@
               = render @chat_room.messages
       .chat
         .chat-message
-          = form_for @message, url: '#' do |f|
+          = form_for @message, method: :post, remote: true do |f|
             = hidden_field_tag 'chat_room_id', @chat_room.id
             .input-field.col.s8
               %i.material-icons.prefix mode_edit
               = f.text_area :body, class: 'materialize-textarea', placeholder: 'Type your message...'
 
               %small.text-muted From 2 to 1000 characters
+              = f.file_field :image
             = f.submit "Post", class: 'btn btn-primary btn-lg'
-
