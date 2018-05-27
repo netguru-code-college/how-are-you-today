@@ -32,6 +32,6 @@ jQuery(document).on 'turbolinks:load', ->
         setTimeout (->
           $( "input[name='commit']" ).removeAttr("disabled")
         ), 100
-      e.preventDefault()
+      #e.preventDefault()
 
 return false
